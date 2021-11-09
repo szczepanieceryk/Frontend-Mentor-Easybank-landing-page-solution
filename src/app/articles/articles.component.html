@@ -1,0 +1,19 @@
+<div class="articles-wrapper">
+  <h2 class="title">
+    {{title}}
+  </h2>
+  <div *ngFor="let article of articlesContent" class="article">
+    <img src={{article.img}} alt="article image">
+    <div class="article-content">
+      <small>
+        {{article.author}}
+      </small>
+      <span class="article-title">
+        {{article.title}}
+      </span>
+      <span class="article-text text">
+        {{article.text}}
+      </span>
+    </div>
+  </div>
+</div>

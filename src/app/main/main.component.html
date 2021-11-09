@@ -1,0 +1,17 @@
+<div class="main-wrapper">
+  <h2 class="title">
+    {{title}}
+  </h2>
+  <span class="main-text text">
+    {{maintext}}
+  </span>
+  <div *ngFor="let component of mainContent" class="main-content">
+    <img src={{component.img}} alt="">
+    <span class=content-title>
+      {{component.title}}
+    </span>
+    <span class="content-description text">
+      {{component.description}}
+    </span>
+  </div>
+</div>

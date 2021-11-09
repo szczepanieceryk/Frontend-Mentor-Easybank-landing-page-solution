@@ -1,0 +1,97 @@
+.top-nav-wrapper-desktop{
+    display: none;
+    .logo{
+        margin: 20px 20px;
+        max-width:140px;
+        max-height:20px;
+    }
+    .btn-request{
+        margin: 0 auto;
+        max-height: 46px;
+    }
+}
+.top-nav-wrapper-mobile{
+    padding: 20px;
+    position: relative;
+    svg{
+        cursor: pointer;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+    .exit-icon{
+        display: none;
+    }
+    .navigation{
+        display: none;
+        padding: 20px;
+        position: fixed;
+        width: 90%;
+        margin: 30px auto;
+        text-align: center;
+        border-radius: 6px;
+        background-color: #fff;
+        li{
+            margin: 20px auto;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+
+    // active states for mobile menu
+    .exit-icon.active{
+        display: block;
+    }
+    .hamburger-icon.active{
+        display: none;
+    }
+    .navigation.active{
+        display: block;
+    }
+}
+
+// navigation for desktop
+@media screen and(min-width:1025px){
+    .top-nav-wrapper-mobile{
+        display: none;
+    }
+    .top-nav-wrapper-desktop{
+        display: flex;
+        flex-wrap: wrap;
+        padding:20px 0;
+        
+        .navigation{
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            max-width:400px;
+           ul{
+            margin-left: 100px;
+            display: flex;
+            // flex-wrap: wrap;
+            flex-basis: 100%;
+           }
+            li{
+                margin: 20px auto;
+                flex-basis: 20%;
+                list-style: none;
+            }
+            a {
+                margin: 10px;
+                padding-bottom: 30px;
+                text-decoration: none;
+                &:hover{
+                    border-bottom: 4px solid hsl(136, 65%, 51%);
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width:1201px){
+    .top-nav-wrapper-desktop{
+        padding: 20px 100px;
+    }
+}
