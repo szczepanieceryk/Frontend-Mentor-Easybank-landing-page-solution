@@ -1,7 +1,10 @@
+// import custom SCSS variables
+@use '../../custom' as c;
+
 .footer-wrapper{
     padding: 20px;
     text-align: center;
-    background-color: hsl(233, 26%, 24%);
+    background-color: c.$dark-blue;
     .logo{
         margin: 20px auto;
     }
@@ -10,9 +13,15 @@
             margin: 10px;
             &:hover{
                 cursor: pointer;
-                fill: hsl(136, 65%, 51%);
+                fill: c.$lime-green;
             }
         }
+    }
+    .copyrights{
+        font-size: 14px;
+    }
+    .btn-request{
+        max-height: 46px;
     }
     .navigation{
         li{
@@ -25,12 +34,9 @@
             color: hsl(0, 0%, 98%);
             transition: .3s;
             &:hover{
-                color: hsl(136, 65%, 51%);
+                color: c.$lime-green;
             }
         }
-    }
-    .copyrights{
-        font-size: 14px;
     }
 }
 @media screen and(min-width:769px){
@@ -61,5 +67,10 @@
 @media screen and(min-width:1201px){
     .footer-wrapper{
         padding: 20px 100px;
+    }
+}
+@media screen and(min-width:1600px){
+    .footer-wrapper{
+        padding: 20px 150px;
     }
 }

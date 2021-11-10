@@ -1,9 +1,12 @@
+// import custom SCSS variables
+@use '../../custom' as c;
+
 .main-wrapper{
     padding: 40px 20px;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    background-color: hsl(220, 16%, 96%);
+    background-color: c.$light-grayish-blue;
     .title{
         margin: 0 auto;
         padding: 0 40px;
@@ -52,3 +55,8 @@
     }
 }
 
+@media screen and(min-width:1600px){
+    .main-wrapper{
+        padding: 40px 150px;
+    }
+}

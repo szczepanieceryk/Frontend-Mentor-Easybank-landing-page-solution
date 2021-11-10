@@ -32,7 +32,6 @@
     .articles-wrapper{
         text-align: left;
         .article{
-
             flex-basis: 20%;
         }
     }
@@ -47,3 +46,8 @@
     }
 }
 
+@media screen and(min-width:1600px){
+    .articles-wrapper{
+        padding: 60px 150px;
+    }
+}

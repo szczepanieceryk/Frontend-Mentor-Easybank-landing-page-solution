@@ -1,10 +1,13 @@
+// import custom SCSS variables
+@use '../../custom' as c;
+
 .header-wrapper{
     padding-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    background-color: hsl(0, 0%, 98%);
+    background-color: c.$very-light-gray;
     .header-img{
         width: 100%;
         max-width: 500px;
@@ -55,6 +58,7 @@
         }
     }
 }
+
 @media screen and(min-width:1025px){
     .header-wrapper{
         .header-content{
@@ -76,9 +80,6 @@
 
 @media screen and(min-width:1400px){
     .header-wrapper{
-        padding-left: 100px;
-        .header-content{
-            padding-right: 250px;
-        }
+        padding-left: 150px;
     }
 }

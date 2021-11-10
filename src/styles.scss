@@ -1,12 +1,16 @@
+// import custom SCSS variables
+@use './custom' as c;
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    font-family: 'Public Sans',Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 18px;
+    font-family: c.$body-font;
+    font-weight: c.$font-weight;
+    font-size: c.$font-size;
 }
 .btn-request{
     margin: 30px auto 20px;
@@ -15,7 +19,7 @@ body{
     border: none;
     letter-spacing: 1px;
     display: block;
-    color: hsl(0, 0%, 100%);
+    color: c.$white;
     background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));    
     &:hover{
         cursor: pointer;
@@ -31,10 +35,5 @@ body{
  }
 }
 .text,small {
-    color: hsl(233, 8%, 62%);
+    color: c.$grayish-blue;
 }
-
-// .header-wrapper,.main-wrapper,.top-nav-wrapper-desktop,.articles-wrapper{
-//     margin: 0 auto;
-//     max-width: 1700px;
-// }

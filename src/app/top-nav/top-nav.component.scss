@@ -1,6 +1,9 @@
+// import custom SCSS variables
+@use '../../custom' as c;
+
 .top-nav-wrapper-desktop{
     display: none;
-    .logo{
+    .logo{     
         margin: 20px 20px;
         max-width:140px;
         max-height:20px;
@@ -22,15 +25,17 @@
     .exit-icon{
         display: none;
     }
-    .navigation{
-        display: none;
+    
+    .navigation{    
+        margin: 30px auto;
         padding: 20px;
+        display: none;
         position: fixed;
         width: 90%;
-        margin: 30px auto;
         text-align: center;
         border-radius: 6px;
-        background-color: #fff;
+        background-color: c.$white;
+        border: 1px solid black;
         li{
             margin: 20px auto;
             list-style: none;
@@ -39,6 +44,12 @@
             text-decoration: none;
         }
     }
+
+    // .nav-wrapper.active{
+    //     position: fixed;
+    //     background-color: rgba(0,0,0,.5);
+    //     z-index: 4;
+    // }
 
     // active states for mobile menu
     .exit-icon.active{
@@ -58,19 +69,23 @@
         display: none;
     }
     .top-nav-wrapper-desktop{
+        padding:20px 0;
+        position: relative;
         display: flex;
         flex-wrap: wrap;
-        padding:20px 0;
-        
+        .btn-request{
+            top:30px;
+            right: 100px;
+            position: absolute;
+        }
         .navigation{
             display: flex;
             flex-wrap: wrap;
             flex-basis: 100%;
-            max-width:400px;
+            max-width:600px;
            ul{
             margin-left: 100px;
             display: flex;
-            // flex-wrap: wrap;
             flex-basis: 100%;
            }
             li{
@@ -82,8 +97,9 @@
                 margin: 10px;
                 padding-bottom: 30px;
                 text-decoration: none;
+                color: c.$grayish-blue;
                 &:hover{
-                    border-bottom: 4px solid hsl(136, 65%, 51%);
+                    border-bottom: 4px solid c.$lime-green;
                 }
             }
         }
@@ -93,5 +109,15 @@
 @media screen and(min-width:1201px){
     .top-nav-wrapper-desktop{
         padding: 20px 100px;
+    }
+}
+@media screen and(min-width:1600px){
+    .top-nav-wrapper-desktop{
+        padding: 20px 150px;
+        .btn-request{
+            top:30px;
+            right: 150px;
+            position: absolute;
+        }
     }
 }
