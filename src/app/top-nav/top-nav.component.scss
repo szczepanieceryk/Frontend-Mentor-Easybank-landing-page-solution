@@ -35,7 +35,6 @@
         text-align: center;
         border-radius: 6px;
         background-color: c.$white;
-        border: 1px solid black;
         li{
             margin: 20px auto;
             list-style: none;
@@ -44,12 +43,6 @@
             text-decoration: none;
         }
     }
-
-    // .nav-wrapper.active{
-    //     position: fixed;
-    //     background-color: rgba(0,0,0,.5);
-    //     z-index: 4;
-    // }
 
     // active states for mobile menu
     .exit-icon.active{
