@@ -11,7 +11,18 @@
 
 <body>
   <app-root></app-root>
-<script src="runtime.092e7ef80c3e69685a69.js" defer></script><script src="polyfills.81ca05b59b101f128d34.js" defer></script><script src="main.19101a8c6de7660d0e0a.js" defer></script>
+  <script>
+    // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
+    (function () {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+
+  </script>
+<script src="runtime.092e7ef80c3e69685a69.js" defer></script><script src="polyfills.81ca05b59b101f128d34.js" defer></script><script src="main.60b62ee7fb6489977f30.js" defer></script>
 
 
 </body></html>
