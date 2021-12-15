@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 
+  // active flag for mobile menu
   public isActive = false;
 
   constructor() { }
@@ -16,10 +17,6 @@ export class TopNavComponent implements OnInit {
 
   activeMenu(){
     this.isActive = !this.isActive;
-  
-      // document.getElementById('header-wrapper')!.style.backgroundColor = 'rgba(0,0,0,.8)'
-    
-    
   }
 
 }

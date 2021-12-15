@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+    // content for main wrapper title and main text
     title:string = 'Why choose Easybank?';
     maintext:string = 'We leverage Open Banking to turn your bank account into your financial hub. Controlyour finances like never before.';
 
+    // content for main-component ngFor loop
     mainContent:Array<any> = [
     {
       img:'../../assets/images/icon-online.svg',
